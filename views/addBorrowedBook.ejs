@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Borrowed Books</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="form-container issue-book-page">
+
+        <div class="form-box">
+
+            <h1>Issue Book</h1>
+            <a href="/borrowedBooks" class="back-btn">
+                ← Back to Borrowed Books
+            </a>
+            <form action="/borrowedbooks/add" method="POST">
+
+                <label>Student USN</label>
+                <input type="text" name="usn" placeholder="Enter Student USN" required>
+
+                <label>Select Book</label>
+                <select name="book_id" required>
+                    <option value="">Select Book</option>
+
+                    <% books.forEach(book=> { %>
+                        <option value="<%= book.id %>">
+                            <%= book.title %>
+                        </option>
+                        <% }) %>
+                </select>
+
+                <label>Borrow Date</label>
+                <input type="date" name="borrowed_date" required>
+
+                <label>Expected Return Date</label>
+                <input type="date" name="return_date" required>
+
+                <button type="submit">
+                    Issue Book
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

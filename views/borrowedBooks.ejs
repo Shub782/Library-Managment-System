@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowed Books</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="main-page">
+        <h1>Borrowed Books</h1>
+
+        <a href="/borrowedbooks/add">Issue Book</a>
+        <a href="/dashboard" class="dashboard-btn">
+            Return to Dashboard </a>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>USN</th>
+                <th>Book Title</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+
+            <% books.forEach(book=> { %>
+                <tr>
+                    <td>
+                        <%= book.id %>
+                    </td>
+                    <td>
+                        <%= book.usn %>
+                    </td>
+                    <td>
+                        <%= book.title %>
+                    </td>
+                    <td>
+                        <%= book.borrowed_date %>
+                    </td>
+                    <td>
+                        <%= book.return_date %>
+                    </td>
+                    <td>
+                        <%= book.status %>
+                    </td>
+                    <td>
+                        <% if (book.status==='Borrowed' ) { %>
+
+                            <a href="/borrowedbooks/return/<%= book.id %>" class="edit-btn">
+                                Return
+                            </a>
+
+                            <% } else { %>
+
+                                <span style="color: green; font-weight: bold;">
+                                    Returned
+                                </span>
+
+                                <% } %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </div>
+</body>
+
+</html>

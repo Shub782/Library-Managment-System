@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="main-page">
+
+        <h1>Students Management</h1>
+
+        <a href="/dashboard" class="dashboard-btn">
+            Return to Dashboard
+        </a>
+
+        <a href="/students/add">Add Student</a>
+
+        <a href="/students" class="show-btn">
+            Show All
+        </a>
+
+        <div class="search-container">
+            <form action="/students/search" method="GET">
+
+                <input type="text" name="keyword" placeholder="Search by USN or Name">
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+        </div>
+
+
+
+        <table border="1">
+            <tr>
+                <th>USN</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Actions</th>
+            </tr>
+
+            <% students.forEach(student=> { %>
+                <tr>
+                    <td>
+                        <%= student.usn %>
+                    </td>
+                    <td>
+                        <%= student.name %>
+                    </td>
+                    <td>
+                        <%= student.branch %>
+                    </td>
+                    <td>
+                        <a href="/students/edit/<%= student.usn %>" class="edit-btn">Edit</a>
+
+                        <a href="/students/delete/<%= student.usn %>" class="delete-btn">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+                <% }) %>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

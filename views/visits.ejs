@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Visits</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="main-page">
+
+        <h1>Library Visits</h1>
+
+        <a href="/dashboard">Back to Dashboard</a>
+
+        <form action="/visits/add" method="POST" class="visit-form">
+
+
+            <input type="text" name="usn" placeholder="USN" required>
+
+            <input type="time" name="entry_time" required>
+
+            <input type="time" name="exit_time" required>
+
+            <button type="submit">Add Visit</button>
+
+           <input type="text" name="usn" placeholder="Search by USN" required>
+            <button type="submit">Search</button>
+
+        </form>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>USN</th>
+                <th>Entry</th>
+                <th>Exit</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+            <% if (visits && visits.length> 0) { %>
+
+                <% visits.forEach(v=> { %>
+                    <tr>
+                        <td>
+                            <%= v.id %>
+                        </td>
+                        <td>
+                            <%= v.usn %>
+                        </td>
+                        <td>
+                            <%= v.entry_time %>
+                        </td>
+                        <td>
+                            <%= v.exit_time %>
+                        </td>
+                        <td>
+                            <%= v.visit_date %>
+                        </td>
+                        <td>
+                            <a href="/visits/delete/<%= v.id %>">Delete</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+
+                        <% } else { %>
+
+                            <tr>
+                                <td colspan="6">No Visits Found</td>
+                            </tr>
+
+                            <% } %>
+
+        </table>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,708 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background-color: lightseagreen;
+}
+.login-container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+.login-container .login-box{
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width:400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.login-container .login-box h1{
+    text-align:center;
+    margin-bottom: 10px;
+    color: grey;
+}
+.login-container .login-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-container .login-box input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    border: 1px solid #ccc;
+}
+.login-container .login-box button{
+    width:100%;
+    padding:12px;
+    border: none;
+    background-color: green;
+    color:white;
+    cursor: pointer;
+}
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background-color: lightgreen;
+    color:white;
+    padding-top:20px;
+}
+.sidebar h2{
+    text-align: center;
+    margin-bottom:30px;
+}
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    padding:15px 25px;
+}
+.sidebar a:hover{
+    background-color: limegreen;
+    color: white;
+}
+.main{
+    margin-left:250px;
+    padding:30px
+}
+.main h1{
+    margin-bottom:30px;
+}
+.main .cards{
+    display:flex;
+    gap:20px;
+    margin-bottom: 30px;
+}
+.main .cards .card{
+    flex:1;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding:25px;
+    border-radius: 15px;
+    height:200px;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+}
+.main-page{
+    padding:30px;
+}
+.main-page h1{
+    margin-bottom: 30px;
+    color:green;
+}
+.main-page table{
+    width:100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top:30px;
+}
+.main-page table th{
+    background-color: green;
+    padding: 15px;
+}
+.main-page table td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+.main-page table tr:nth-child(odd){
+    background-color: lightcoral;
+}
+.main-page a{
+    text-decoration: none;
+    padding:10px 30px;
+    background-color: crimson;
+    color:white;
+    border-radius: 10px;
+    align-items: center;
+}
+/* Form Pages */
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-box{
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.form-box h1{
+    text-align: center;
+    color: green;
+    margin-bottom: 25px;
+}
+
+.form-box input,
+.form-box select{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-box button{
+    width: 100%;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-box button:hover{
+    background-color: darkgreen;
+}
+
+
+
+.search-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-box button{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.edit-btn{
+    background-color: orange;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.delete-btn{
+    background-color: crimson;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.show-btn{
+    background-color: royalblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+.main-page table tr:hover{
+    background-color: #e8f5e9;
+}.search-container{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.search-container input{
+    padding:10px;
+    width:300px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.search-container button{
+    padding:10px 20px;
+    background-color:green;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.show-btn{
+    margin-left:10px;
+    text-decoration:none;
+    padding:10px 20px;
+    background-color:royalblue;
+    color:white;
+    border-radius:10px;
+}
+
+.edit-btn{
+    text-decoration:none;
+    padding:8px 20px;
+    background-color:orange;
+    color:white;
+    border-radius:8px;
+    margin-right:5px;
+}
+
+.delete-btn{
+    text-decoration:none;
+    padding:8px 20px;
+    background-color:crimson;
+    color:white;
+    border-radius:8px;
+}
+.dashboard-btn{
+    text-decoration:none;
+    padding:10px 20px;
+    background-color:royalblue;
+    color:white;
+    border-radius:10px;
+    margin-right:10px;
+    display:inline-block;
+}
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    background-color:royalblue;
+    color:white;
+    padding:8px 15px;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+.main-page table th:last-child,
+.main-page table td:last-child{
+    text-align:center;
+}
+.edit-btn{
+    margin-right:10px;
+}
+/* Issue Book Page Only */
+
+.issue-book-page .form-box{
+    width:450px;
+    padding:20px;
+}
+
+.issue-book-page h1{
+    text-align:center;
+    color:darkgreen;
+    font-size:28px;
+    margin-bottom:15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.issue-book-page label{
+    display:block;
+    margin-top:8px;
+    margin-bottom:3px;
+    font-size:15px;
+    font-weight:bold;
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.issue-book-page input,
+.issue-book-page select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
+    box-sizing:border-box;
+}
+
+.issue-book-page button{
+    width:100%;
+    margin-top:15px;
+    padding:10px;
+    background-color:green;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.issue-book-page button:hover{
+    background-color:darkgreen;
+}
+/* Borrowed Books Page */
+
+.dashboard-btn{
+    background-color: royalblue !important;
+    margin-left: 10px;
+}
+
+.main-page h1{
+    color: green;
+    margin-bottom: 20px;
+}
+
+.main-page table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+    background:white;
+}
+
+.main-page table th{
+    background-color:green;
+    color:white;
+    padding:15px;
+}
+
+.main-page table td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+.main-page table tr:nth-child(even){
+    background-color:#f5f5f5;
+}
+
+.main-page table tr:hover{
+    background-color:#e8f5e9;
+}
+.visit-form{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.visit-form input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 160px;
+    outline: none;
+}
+
+.visit-form input[type="time"]{
+    min-width: 140px;
+}
+
+.visit-form button{
+    padding: 10px 16px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.visit-form button:hover{
+    background: darkgreen;
+}
+/*/* =========================
+   LOGIN PAGE 3D BACKGROUND
+   ========================= */
+
+body{
+    overflow-x: hidden;
+}
+
+.login-container{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,#00b09b,#96c93d);
+}
+
+/* Moving 3D Balls */
+
+.login-container::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    top: -80px;
+    left: -80px;
+    box-shadow: 0 0 80px rgba(255,255,255,0.6);
+    animation: moveBall1 10s infinite alternate ease-in-out;
+}
+
+.login-container::after{
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(0,255,255,0.25);
+    bottom: -120px;
+    right: -120px;
+    box-shadow: 0 0 100px rgba(0,255,255,0.5);
+    animation: moveBall2 12s infinite alternate ease-in-out;
+}
+
+.login-box{
+    position: relative;
+    z-index: 10;
+}
+
+.login-box::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    top: -40px;
+    right: -40px;
+    animation: orbit 6s linear infinite;
+}
+
+.login-box::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    bottom: -30px;
+    left: -30px;
+    animation: orbit 8s linear infinite reverse;
+}
+
+/* Animations */
+
+@keyframes moveBall1{
+    from{
+        transform: translate(0,0) scale(1);
+    }
+    to{
+        transform: translate(120px,80px) scale(1.3);
+    }
+}
+
+@keyframes moveBall2{
+    from{
+        transform: translate(0,0) scale(1);
+    }
+    to{
+        transform: translate(-100px,-120px) scale(1.2);
+    }
+}
+
+@keyframes orbit{
+    from{
+        transform: rotate(0deg) translateX(20px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(20px) rotate(-360deg);
+    }
+}
+
+/* Login Box */
+
+.login-container .login-box{
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.95),
+        rgba(245,255,250,0.95)
+    );
+
+    padding: 40px;
+    border-radius: 25px;
+    width: 420px;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.25),
+        0 0 20px rgba(255,255,255,0.3);
+
+    transition: 0.4s;
+    position: relative;
+    z-index: 10;
+}
+
+.login-container .login-box:hover{
+    transform: translateY(-10px) rotateX(5deg);
+}
+
+/* Headings */
+
+.login-container .login-box h1{
+    text-align: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.login-container .login-box h2{
+    text-align: center;
+    color: #0b7a4b;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+
+.login-container .login-box input{
+    width: 100%;
+    padding: 15px 18px;
+    margin: 12px 0;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+
+    background: #f8f9fa;
+    font-size: 15px;
+
+    box-sizing: border-box;   /* Prevent touching border */
+    outline: none;
+}
+
+.login-container .login-box input:focus{
+    border-color: #2ecc71;
+    box-shadow: 0 0 8px rgba(46,204,113,0.4);
+}
+
+/* Button */
+
+.login-container .login-box button{
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        to right,
+        #11998e,
+        #38ef7d
+    );
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-container .login-box button:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 768px){
+
+    .sidebar{
+        width: 200px;
+    }
+
+    .main{
+        margin-left: 200px;
+        padding: 15px;
+    }
+
+    .main .cards{
+        flex-direction: column;
+    }
+
+    .login-container .login-box,
+    .form-box{
+        width: 90%;
+        padding: 25px;
+    }
+
+    .search-container input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-container button,
+    .show-btn{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .visit-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .visit-form input,
+    .visit-form button{
+        width: 100%;
+    }
+
+    .main-page{
+        overflow-x: auto;
+    }
+
+    .main-page table{
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a{
+        text-align: center;
+    }
+
+    .main{
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .login-container .login-box,
+    .form-box{
+        width: 95%;
+        padding: 20px;
+    }
+
+    .main h1,
+    .main-page h1{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .login-container::before{
+        width: 200px;
+        height: 200px;
+    }
+
+    .login-container::after{
+        width: 220px;
+        height: 220px;
+    }
+}
