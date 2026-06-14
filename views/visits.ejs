@@ -17,19 +17,23 @@
 
         <form action="/visits/add" method="POST" class="visit-form">
 
+    <input type="text" name="usn" placeholder="USN" required>
 
-            <input type="text" name="usn" placeholder="USN" required>
+    <input type="time" name="entry_time" required>
 
-            <input type="time" name="entry_time" required>
+    <input type="time" name="exit_time" required>
 
-            <input type="time" name="exit_time" required>
+    <button type="submit">Add Visit</button>
 
-            <button type="submit">Add Visit</button>
+</form>
 
-           <input type="text" name="usn" placeholder="Search by USN" required>
-            <button type="submit">Search</button>
+<form action="/visits/search" method="GET" class="search-container">
 
-        </form>
+    <input type="text" name="usn" placeholder="Search by USN">
+
+    <button type="submit">Search</button>
+
+</form>
 
         <table>
             <tr>
